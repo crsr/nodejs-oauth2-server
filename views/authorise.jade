@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .container
+    form.form-signin(method='post', action='/oauth/authorise', role='form')
+      h2.form-signin-heading Please notice you will allow following permissions:
+      .form-group
+        input.form-control(name='client_id', type='email', value='#{args.client_id}')
+      .form-group
+        input.form-control(name='state', type='email', value='#{args.state}')
+       .form-group
+        input.form-control(name='response_type', type='email', value='#{args.response_type}')
+           
+      .form-group
+        button.btn.btn-lg.btn-primary.btn-block(type='submit') Allow
